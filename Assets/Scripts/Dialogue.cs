@@ -1,25 +1,30 @@
 ﻿
 public class Dialogue
 {
+    public enum Type
+    {
+        NORMAL,
+        DELAY,
+    }
+    
     public string speaker;
     public string text;
-    public string[] delayTexts;
-    public int type;
+    public string[] delayText;
+    public Type type;
 
     public Dialogue(string speaker, string text)
     {
         this.speaker = speaker;
         this.text = text;
         
-        type = 1;
+        type = Type.NORMAL;
     }
 
-    private Dialogue(string speaker,string[] delayTexts)
+    public Dialogue(string speaker,string[] delayText)
     {
         this.speaker = speaker;
-        this.delayTexts = delayTexts;
+        this.delayText = delayText;
         
-        type = 2;
+        type = Type.DELAY;
     }
-
 }
