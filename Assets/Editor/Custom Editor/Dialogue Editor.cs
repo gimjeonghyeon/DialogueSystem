@@ -78,6 +78,9 @@ public class DialogueEditor : EditorWindow
     }
 }
 
+// 리스트를 클래스로 만들어서 다시 json으로 변환
+// 이번 작업은 계속 이어가고, 추후에 개선을 진행하는 식으로
+
 [Serializable]
 public class DialogueData
 {
